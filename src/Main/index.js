@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from "../Form";
 import BlogPost from "../BlogPost";
+import Button from "../Button";
 // just have to require (import) the folder
 
 // function Main() {
@@ -15,7 +16,7 @@ import BlogPost from "../BlogPost";
 export default class Main extends Component {
     // new school way of defining state:
     state = {
-        isPosting: true,
+        isPosting: false,
         // for development speed, set isPosting to true, so we don't have to press the toggle button
         name: 'Albert',
         posts: [
@@ -82,7 +83,7 @@ export default class Main extends Component {
                 </header>
 
                 <section>
-                    <button onClick={this.handleClick}>toggle</button>
+                    <Button handleClick={this.handleClick} type="Add Post" />
                     {/* in a CLASS component, you will NEED to specify 'this' */}
                     {/* {this.state.post[0].post}  hard-coding is bad; instead, do:*/}
                     {!!this.state.isPosting ? <Form handleAddPost={this.handleAddPost}/> : null}

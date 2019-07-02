@@ -1,6 +1,7 @@
 // we would NOT want to make this a STATEFUL component; this will just be responsible
 // for rendering shit
 import React from "react";
+import Button from "../Button";
 
 function BlogPost({title, author, post, index, handleDeletePost}) {
     // note how we can take advantage of DESTRUCTURING (that way we can save a bit on typing); in other
